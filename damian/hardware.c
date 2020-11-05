@@ -10,14 +10,20 @@ void inicializarHard(void){
     }
     
     fputs("17",fp);
+    fflush(fp);    
     fputs("4",fp);
+    fflush(fp);
     fputs("18",fp);
+    fflush(fp);
     fputs("23",fp);
+    fflush(fp);
     fputs("24",fp);
+    fflush(fp);
     fputs("25",fp);
+    fflush(fp);
     fputs("22",fp);
+    fflush(fp);
     fputs("27",fp);
-    
     fclose(fp);
     
     fp = fopen("/sys/class/gpio/gpio17/direction", "w");
@@ -140,12 +146,19 @@ void destruirHard (void){
     }
     
     fputs("17",fp);
+    fflush(fp);
     fputs("4" ,fp);
+    fflush(fp);
     fputs("18",fp);
+    fflush(fp);
     fputs("23",fp);
+    fflush(fp);
     fputs("24",fp);
+    fflush(fp);
     fputs("25",fp);
+    fflush(fp);
     fputs("22",fp);
+    fflush(fp);
     fputs("27",fp);
     
     fclose(fp);
