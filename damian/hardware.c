@@ -36,7 +36,7 @@ void inicializarHard(void){
     
     fclose(fp);
     
-    fp = fopen("/sys/class/gpio/gpio04/direction", "w");
+    fp = fopen("/sys/class/gpio/gpio4/direction", "w");
     if ( !fp ){
         
         printf("Error al intentar editar la direccion del gpio04");
