@@ -2,7 +2,7 @@
 
 void inicializarHard(void){
     
-    FILE *fp = fopen("sys/class/gpio/export", "w");
+    FILE *fp = fopen("/sys/class/gpio/export", "w");
             
     if ( !fp ){ //Primero escribo todos los pines que utilizare en el archivo export.
         
@@ -20,7 +20,7 @@ void inicializarHard(void){
     
     fclose(fp);
     
-    fp = fopen("sys/class/gpio/gpio17/direction", "w");
+    fp = fopen("/sys/class/gpio/gpio17/direction", "w");
     if ( !fp ){   //Luego seteo todos pines como salida
         
         printf("Error al intentar editar la direccion del gpio17");
@@ -30,7 +30,7 @@ void inicializarHard(void){
     
     fclose(fp);
     
-    fp = fopen("sys/class/gpio/gpio04/direction", "w");
+    fp = fopen("/sys/class/gpio/gpio04/direction", "w");
     if ( !fp ){
         
         printf("Error al intentar editar la direccion del gpio04");
@@ -40,7 +40,7 @@ void inicializarHard(void){
     
     fclose(fp);
     
-    fp = fopen("sys/class/gpio/gpio18/direction", "w");
+    fp = fopen("/sys/class/gpio/gpio18/direction", "w");
     if ( !fp ){
         
         printf("Error al intentar editar la direccion del gpio18");
@@ -50,7 +50,7 @@ void inicializarHard(void){
     
     fclose(fp);
     
-    fp = fopen("sys/class/gpio/gpio23/direction", "w");
+    fp = fopen("/sys/class/gpio/gpio23/direction", "w");
     if ( !fp ){
         
         printf("Error al intentar editar la direccion del gpio23");
@@ -60,7 +60,7 @@ void inicializarHard(void){
     
     fclose(fp);
     
-    fp = fopen("sys/class/gpio/gpio24/direction", "w");
+    fp = fopen("/sys/class/gpio/gpio24/direction", "w");
     if ( !fp){
         
         printf("Error al intentar editar la direccion del gpio24");
@@ -70,7 +70,7 @@ void inicializarHard(void){
     
     fclose(fp);
     
-    fp = fopen("sys/class/gpio/gpio25/direction", "w");
+    fp = fopen("/sys/class/gpio/gpio25/direction", "w");
     if ( !fp ){
         
         printf("Error al intentar editar la direccion del gpio25");
@@ -80,7 +80,7 @@ void inicializarHard(void){
     
     fclose(fp);
     
-    fp = fopen("sys/class/gpio/gpio22/direction", "w");
+    fp = fopen("/sys/class/gpio/gpio22/direction", "w");
     if ( !fp ){
         
         printf("Error al intentar editar la direccion del gpio22");
@@ -90,7 +90,7 @@ void inicializarHard(void){
     
     fclose(fp);
     
-    fp = fopen("sys/class/gpio/gpio27/direction", "w");
+    fp = fopen("/sys/class/gpio/gpio27/direction", "w");
     if ( !fp ){
         
         printf("Error al intentar editar la direccion del gpio27");
@@ -133,7 +133,7 @@ void actualizarHard (void){
 }
 void destruirHard (void){
     
-    FILE *fp = fopen("sys/class/gpio/unexport", "w");
+    FILE *fp = fopen("/sys/class/gpio/unexport", "w");
     if ( !fp ){ //Primero escribo todos los pines que utilizare en el archivo export.
         
         printf("Error al intentar abrir unexport");
@@ -159,35 +159,35 @@ char* identificador (int i){
         
         case 0:
             ;
-            salida = "sys/class/gpio/gpio17/value";
+            salida = "/sys/class/gpio/gpio17/value";
             break;
         case 1:
             ;
-            salida = "sys/class/gpio/gpio04/value";
+            salida = "/sys/class/gpio/gpio04/value";
             break;    
         case 2:
             ;
-            salida = "sys/class/gpio/gpio18/value";
+            salida = "/sys/class/gpio/gpio18/value";
             break;
         case 3:
             ;
-            salida = "sys/class/gpio/gpio23/value";
+            salida = "/sys/class/gpio/gpio23/value";
             break;
         case 4:
             ;
-            salida = "sys/class/gpio/gpio24/value";
+            salida = "/sys/class/gpio/gpio24/value";
             break;
         case 5:
             ;
-            salida = "sys/class/gpio/gpio25/value";
+            salida = "/sys/class/gpio/gpio25/value";
             break;
         case 6:
             ;
-            salida = "sys/class/gpio/gpio22/value";
+            salida = "/sys/class/gpio/gpio22/value";
             break;
         case 7:
             ;
-            salida = "sys/class/gpio/gpio27/value";
+            salida = "/sys/class/gpio/gpio27/value";
             break;
         default:
             salida = NULL;
