@@ -176,7 +176,7 @@ char* identificador (int i){
             break;
         case 1:
             ;
-            salida = "/sys/class/gpio/gpio04/value";
+            salida = "/sys/class/gpio/gpio4/value";
             break;    
         case 2:
             ;
