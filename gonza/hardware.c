@@ -1,5 +1,4 @@
 #include "hardware.h"
-#include "emulador.h"
 #include <stdlib.h>
 
 #define LEDSCANT 8
