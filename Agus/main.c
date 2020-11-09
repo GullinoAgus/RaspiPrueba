@@ -31,12 +31,12 @@ void mainOptions();
 
 
 
-int main(int argc, char** argv) {
+int main(void) {
     
     char entrada;
     int terminado = 0;
 
-    configurarPuertos();
+    configurarPuerto();
     
     printf("Bienvenido al simulador del puerto A de un microcontrolador.\n");       //Mostramos la intefaz
     mainOptions();
@@ -107,7 +107,7 @@ int main(int argc, char** argv) {
     
     printf("Simulacion finalizada.\n");
     
-    destruirHard();
+    liberarPuerto();
     
     return (EXIT_SUCCESS);
 }
