@@ -649,6 +649,26 @@ void maskToggle(uint8_t puerto, uint16_t mascara){
     }
 }
 
+uint16_t wordGet(uint8_t puerto){
+    
+    uint16_t word = 0;
+    
+    switch(puerto){
+        case PUERTOA:
+            word = puertoD.byte.A.word;
+            break;
+        case PUERTOB:
+            word = puertoD.byte.B.word;
+            break;
+        case PUERTOD:
+            word = puertoD.word;
+            break;
+        default:
+            break;
+    }
+    return word;
+}
+
 void imprimirPuertos(void){
     uint8_t bufferPuerto[17];
     

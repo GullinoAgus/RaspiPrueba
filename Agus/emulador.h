@@ -85,7 +85,12 @@ void maskToggle(uint8_t puerto, uint16_t mascara);
  * @param puerto el puerto del cual se desee cambiar el bit como caracter mayuscula A, B o D. A y B 8bits, D(A+B) 16bits
  * @param mascara La mascara que contiene la informacion de los bits los cuales se desea invertir su estado
 */
-
+uint16_t wordGet(uint8_t puerto);
+/**
+ * @brief wordGet Devuelve el valor de palabra del puerto que se pase.
+ * @param puerto el puerto del cual se desee saber el valor de palabra, como caracter mayuscula A, B o D. A y B 8bits, D(A+B) 16bits
+ * @return valor de palabra solicitado
+*/
 void imprimirPuertos(void);
 /**
  * @brief imprimirPuertos Imprime el valor de todos los puertos en formato de numero binario.
