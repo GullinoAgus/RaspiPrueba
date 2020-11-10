@@ -2,7 +2,6 @@
 #include <stdlib.h>
 
 #define LEDSCANT 8
-#define 
 
 static const char *strled[] = {"17","4","18","23","24","25","22","27"}; 
 
@@ -36,7 +35,7 @@ int configurarPuerto(){
         sprintf(buffer, "/sys/class/gpio/gpio%s/direction", strled[i]);
 
         LEDarr[i].direction = fopen(buffer, "w");
-        if(dir == NULL){
+        if(LEDarr[i].direction == NULL){
             salida = 1;
         }
 
@@ -47,7 +46,7 @@ int configurarPuerto(){
         sprintf(buffer, "/sys/class/gpio/gpio%s/value", strled[i]);
 
         LEDarr[i].value = fopen(buffer, "w");
-        if(dir == NULL){
+        if(LEDarr[i].value == NULL){
             salida = 1;
         }
 
@@ -62,12 +61,12 @@ int actualizarPi(uint16_t mascara){
 
     for(i = 0; mascara == 0; i++){
 
-        fprintf(LEDarr[i], "%i", mascara%2);
+        fprintf(LEDarr[i].value, "%i", mascara%2);
         mascara/2;
 
     }
 
-    return salida;
+    return 0;
 }
 
 int liberarPuerto(){

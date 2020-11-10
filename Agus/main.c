@@ -61,31 +61,31 @@ int main(void) {
             case '7':
                 bitSet(PUERTOA, CHAR2NUM(entrada));     //Si se ingreso un numero del 0 al 7, prendemos el bit indicado por el numero
                 printMicro();                           //Actualizamos la interfaz
-                actualizarPi(getWord(PUERTOB));
+                actualizarPi(wordGet(PUERTOB));
                 break;
                 
             case 't':
                 maskToggle(PUERTOA, MASKHIGH);          //Si se ingreso el caracter 't', invertimos el estado de todos los bits
                 printMicro();                           //Actualizamos la interfaz
-                actualizarPi(getWord(PUERTOB));
+                actualizarPi(wordGet(PUERTOB));
                 break;
                 
             case 'c':
                 maskOff(PUERTOA, MASKHIGH);             //Si se ingreso un caracter 'c', apagamos todos los LEDs 
                 printMicro();                           //Actualizamos la interfaz
-                actualizarPi(getWord(PUERTOB));
+                actualizarPi(wordGet(PUERTOB));
                 break;
                 
             case 's':
                 maskOn(PUERTOA, MASKHIGH);              //Si se ingreso un caracter 's', prendemos todos los LEDs
                 printMicro();                           //Actualizamos la interfaz
-                actualizarPi(getWord(PUERTOB));
+                actualizarPi(wordGet(PUERTOB));
                 break;
                 
             case 'o':
                 mainOptions();                          //Si se ingreso un caracter 'o', mostramos nuevamente el menu de opciones 
                 printMicro();
-                actualizarPi(getWord(PUERTOB));
+                actualizarPi(wordGet(PUERTOB));
                 break;
                 
             case 'q':
