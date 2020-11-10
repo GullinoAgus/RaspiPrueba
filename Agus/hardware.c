@@ -35,6 +35,8 @@ int configurarPuerto(){
         sprintf(buffer, "/sys/class/gpio/gpio%s/direction", strled[i]);
 
         LEDarr[i].direction = fopen(buffer, "w");
+        fprint(LEDarr[i].direction, "%i", 1);
+        fflush();
         if(LEDarr[i].direction == NULL){
             salida = 1;
         }
@@ -59,9 +61,10 @@ int actualizarPi(uint16_t mascara){
 
     int i;
 
-    for(i = 0; mascara == 0; i++){
+    for(i = 0; mascara != 0; i++){
 
         fprintf(LEDarr[i].value, "%i", mascara%2);
+        fflush();
         mascara /= 2;
 
     }
