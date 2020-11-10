@@ -62,7 +62,7 @@ int actualizarPi(uint16_t mascara){
     for(i = 0; mascara == 0; i++){
 
         fprintf(LEDarr[i].value, "%i", mascara%2);
-        mascara/2;
+        mascara /= 2;
 
     }
 
