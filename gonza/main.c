@@ -41,7 +41,7 @@ int main(int argc, char** argv) {
     printMicro();
 
     if(configurarPuerto() == 1){
-        printf("Error al configurar el puerto");
+        printf("Error al configurar el puerto\n");
         return 1;
     }
     
