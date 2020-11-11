@@ -3,7 +3,7 @@
 #include <unistd.h>
 
 #define LEDSCANT 8
-#define WAITTIME 100
+#define WAITTIME 1000
 
 static const char *strled[] = {"17","4","18","23","24","25","22","27"}; 
 
