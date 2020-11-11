@@ -1,7 +1,9 @@
 #include "hardware.h"
 #include <stdlib.h>
+#include 
 
 #define LEDSCANT 8
+#define WAITTIME 100
 
 static const char *strled[] = {"17","4","18","23","24","25","22","27"}; 
 
@@ -18,6 +20,7 @@ int configurarPuerto(){
         for(int i = 0; i < LEDSCANT; i++){
             fprintf(gpio,"%s", strled[i]);
             fflush(gpio);
+            usleep(WAITTIME);
         }
     }
     
@@ -34,6 +37,7 @@ int configurarPuerto(){
         else{
             fprintf(dir,"%s", "out");
             fclose(dir);
+            usleep(WAITTIME);
         }
     }
 
@@ -60,6 +64,7 @@ int actualizarBit(int led, int estado){
      }
 
     fclose(bitValue);
+    usleep(WAITTIME);
     return salida;
 }
 
@@ -75,6 +80,7 @@ int liberarPuerto(){
         for(int i = 0; i < LEDSCANT; i++){
             fprintf(gpio,"%s", strled[i]);
             fflush(gpio);
+            usleep(WAITTIME);
         }
     }
 
