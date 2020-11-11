@@ -1,6 +1,6 @@
 #include "hardware.h"
 #include <stdlib.h>
-#include 
+#include <unistd.h>
 
 #define LEDSCANT 8
 #define WAITTIME 100
